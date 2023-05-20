@@ -1,0 +1,21 @@
+{
+  "name": "mrpics",
+  "version": "1.0.0",
+  "description": "Simple photography portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "live-server"
+  },
+  "keywords": [
+    "photo",
+    "portfolio",
+    "web",
+    "node",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Lex monteverde",
+  "license": "ISC"
+}
