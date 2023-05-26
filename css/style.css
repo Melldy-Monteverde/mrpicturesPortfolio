@@ -246,6 +246,20 @@ h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
 
+.contact-left form .input-control.success input {
+  border-color: #09c372;
+}
+
+.contact-left form .input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    height: 13px;
+  margin-bottom: 10px;
+}
+
 .contact-left .btn-submit {
     padding: 1.4rem 3rem;
     font-family: 'Poppins', sans-serif;

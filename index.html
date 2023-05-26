@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MrPictures</title>
-  <link rel="stylesheet" href="css/style.css">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -14,14 +13,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.5/sweetalert2.min.css"
     integrity="sha512-InYSgxgTnnt8BG3Yy0GcpSnorz5gxHvT6OEoRWj91Gg+RvNdCiAharnBe+XFIDS754Kd9TekdjXw3V7TAgh6Vw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- bs -->
-  <!-- BUG: check this because broke the form -->
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" -->
-  <!--   integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> -->
+
+  <!-- own styles -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <!-- TODO: delete all useless media -->
   <header id="header" class="vh-100 flex">
     <div class="container">
       <div class="header-content">
@@ -158,33 +155,40 @@
             <div class="title">
               <h2>contact with me</h2>
             </div>
+
             <p class="lead"><i class="fas fa-phone-alt"></i> +54 11-5723-5681</p>
-            <p class="lead"><i class="fas fa-envelope"></i> mail@gmail.com</p>
+            <p class="lead"><i class="fas fa-envelope"></i> mannhyr572@gmail.com</p>
 
-            <form method="" enctype="multipart/form-data" class="contact-form needs-validation" id="form-id" novalidate>
+            <form method="POST" class="contact-form" id="form-id" novalidate>
 
-              <div class="form-input">
-                <input type="text" name="name" class="form-control" placeholder="Your name here ... *"
-                  title="words only and empty spaces" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off" required>
+              <!-- name field -->
+              <div class="input-control">
+                <input type="text" name="name" id="userName" class="form-control" placeholder="Your name here ... *"
+                  title="words and empty spaces only" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off"
+                  required />
 
-                <!-- TODO: check this -->
-                <!-- <div class="invalid-feedback"> -->
-                <!--   <i class="fas fa-times"></i> Words and spaces only -->
-                <!-- </div> -->
+                <div class="error"></div>
               </div>
 
-              <div class="form-input form-input">
+              <!-- mail field -->
+              <div class="input-control">
+                <input class="form-control" id="userEmail" type="text" type="email" name="email"
+                  placeholder="email@example.com *" title="Invalid format"
+                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" autocomplete="off"
+                  required />
+
+                <div class="error"></div>
+              </div>
+
+              <div class="form-input">
                 <input type="submit" class="btn-submit btn form-input" value="Submit">
-
-                <!-- TODO: check this -->
-
-                <!--   <i class="fas fa-times"></i> Invalid format -->
-                <!-- </div> -->
               </div>
 
               <!-- form config -->
+
               <!-- TODO: descoment this -->
-              <!-- <input type="hidden" name="_next" value="https://mrpictures.netlify.app/" /> -->
+
+              <!-- <input type="hidden" name="_next" value="./index.html" /> -->
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_subject" value="Consulta desde la web de MrPictures" />
               <input type="hidden" name="_captcha" value="false" />
@@ -197,7 +201,6 @@
         </div>
       </div>
     </section>
-    <!-- end of contact section -->
 
     <!-- instagram section -->
     <section id="insta" class="py-7">
@@ -218,7 +221,6 @@
         </div>
       </div>
     </section>
-    <!-- end of instagram section -->
   </main>
 
   <footer id="footer" class="py-7">
@@ -232,28 +234,27 @@
         <div>
           <h3>Links</h3>
           <ul class="flex">
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact Me</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#insta">Instagram</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- own js -->
-  <script src="js/typewriting.js"></script>
-  <script src="js/form.js"></script>
   <!-- swal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.5/sweetalert2.min.js"
     integrity="sha512-jt82OWotwBkVkh5JKtP573lNuKiPWjycJcDBtQJ3BkMTzu1dyu4ckGGFmDPxw/wgbKnX9kWeOn+06T41BeWitQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- bsjs -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" -->
-  <!--   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" -->
-  <!--   crossorigin="anonymous"></script> -->
+
+  <!-- own js -->
+  <script src="./js/typewriting.js"></script>
+  <script src="./js/form.js"></script>
+
+  <!-- <script src="./js/form2.js"></script> -->
 </body>
 
 </html>
