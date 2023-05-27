@@ -5,10 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MrPictures</title>
+
+  <!-- scroll reveal js -->
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- swal css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.5/sweetalert2.min.css"
     integrity="sha512-InYSgxgTnnt8BG3Yy0GcpSnorz5gxHvT6OEoRWj91Gg+RvNdCiAharnBe+XFIDS754Kd9TekdjXw3V7TAgh6Vw=="
@@ -16,7 +21,9 @@
 
   <!-- own styles -->
   <link rel="stylesheet" href="./css/style.css">
+
 </head>
+<!-- TODO: mejorar el perfomance de las fotos -->
 
 <body>
   <header id="header" class="vh-100 flex">
@@ -159,39 +166,26 @@
             <p class="lead"><i class="fas fa-phone-alt"></i> +54 11-5723-5681</p>
             <p class="lead"><i class="fas fa-envelope"></i> mannhyr572@gmail.com</p>
 
-            <form method="POST" class="contact-form" id="form-id" novalidate>
-
+            <form method="POST" action="./js/mailer.php" class="contact-form" id="form-id" novalidate>
               <!-- name field -->
               <div class="input-control">
                 <input type="text" name="name" id="userName" class="form-control" placeholder="Your name here ... *"
                   title="words and empty spaces only" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off"
                   required />
-
                 <div class="error"></div>
               </div>
 
               <!-- mail field -->
               <div class="input-control">
-                <input class="form-control" id="userEmail" type="text" type="email" name="email"
-                  placeholder="email@example.com *" title="Invalid format"
-                  pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" autocomplete="off"
-                  required />
-
+                <input class="form-control" id="userEmail" type="email" name="email" placeholder="email@example.com *"
+                  title="Invalid format" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                  autocomplete="off" required />
                 <div class="error"></div>
               </div>
 
               <div class="form-input">
                 <input type="submit" class="btn-submit btn form-input" value="Submit">
               </div>
-
-              <!-- form config -->
-
-              <!-- TODO: descoment this -->
-
-              <!-- <input type="hidden" name="_next" value="./index.html" /> -->
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_subject" value="Consulta desde la web de MrPictures" />
-              <input type="hidden" name="_captcha" value="false" />
             </form>
           </div>
 
@@ -245,16 +239,11 @@
     </div>
   </footer>
 
-  <!-- swal -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.5/sweetalert2.min.js"
-    integrity="sha512-jt82OWotwBkVkh5JKtP573lNuKiPWjycJcDBtQJ3BkMTzu1dyu4ckGGFmDPxw/wgbKnX9kWeOn+06T41BeWitQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- own js -->
-  <script src="./js/typewriting.js"></script>
-  <script src="./js/form.js"></script>
-
-  <!-- <script src="./js/form2.js"></script> -->
 </body>
+
+<!-- typewriting js -->
+<script src="./js/typewriting.js" defer></script>
+<!-- reveal -->
+<script src="./js/reveal.js"></script>
 
 </html>
