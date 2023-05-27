@@ -17,8 +17,5 @@
     "javascript"
   ],
   "author": "Lex monteverde",
-  "license": "ISC",
-  "dependencies": {
-    "nodemailer": "^6.9.2"
-  }
+  "license": "ISC"
 }
