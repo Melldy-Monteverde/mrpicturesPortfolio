@@ -140,7 +140,7 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-/* button down and title -reusable */
+/* button down and title reusable */
 .btn-down {
     font-size: 3rem;
     display: inline-block;
@@ -226,54 +226,16 @@ h1, h2, h3 {
 }
 
 .contact-left .lead {
-    padding: 0.5rem;
-}
-
-.contact-left form {
-    margin-top: 3rem;
-}
-
-.contact-left form .form-control {
-    display: block;
-    margin: 1.6rem 0;
-    border: 2px solid rgba(0, 0, 0, 0.3);
     padding: 1rem;
+    font-size: 2rem;
+    margin: 0.5rem 0;
     width: 100%;
+    display: block;
+  text-align: justify;
 }
 
-.contact-left form .form-control::placeholder {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.contact-left form .input-control.success input {
-  border-color: #09c372;
-}
-
-.contact-left form .input-control.error input {
-  border-color: #ff3860;
-}
-
-.input-control .error {
-    color: #ff3860;
-    height: 13px;
-  margin-bottom: 10px;
-}
-
-.contact-left .btn-submit {
-    padding: 1.4rem 3rem;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    margin-top: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.6rem;
-    transition: var(--transition);
-}
-
-.contact-left .btn-submit:hover {
-    background-color: #000;
+.contact-left .lead i {
+    font-size: 2.5rem;
 }
 
 #insta {
@@ -361,6 +323,7 @@ h1, h2, h3 {
 }
 
 @media(min-width: 576px) {
+
     .title h2 {
         font-size: 4rem;
     }
@@ -383,17 +346,13 @@ h1, h2, h3 {
         object-fit: cover;
     }
 
-    .contact-left form .form-control {
-        max-width: 500px;
-    }
-
     .footer-content ul {
         flex-direction: row;
     }
-
 }
 
 @media(min-width: 768px) {
+
     .header-content h1 {
         font-size: 7rem;
     }
@@ -427,6 +386,7 @@ h1, h2, h3 {
 }
 
 @media(min-width: 992px) {
+
     .insta-grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -437,6 +397,7 @@ h1, h2, h3 {
 }
 
 @media(min-width: 1200px) {
+
     .portfolio-grid {
         grid-template-columns: repeat(3, 1fr);
     }

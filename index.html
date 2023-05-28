@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MrPictures</title>
+  <link rel="shortcut icon" href="./imgs/camera.png" type="image/x-icon">
 
   <!-- scroll reveal js -->
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
@@ -14,13 +15,8 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- swal css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.7.5/sweetalert2.min.css"
-    integrity="sha512-InYSgxgTnnt8BG3Yy0GcpSnorz5gxHvT6OEoRWj91Gg+RvNdCiAharnBe+XFIDS754Kd9TekdjXw3V7TAgh6Vw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
   <!-- own styles -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 </head>
 <!-- TODO: mejorar el perfomance de las fotos -->
@@ -163,30 +159,21 @@
               <h2>contact with me</h2>
             </div>
 
-            <p class="lead"><i class="fas fa-phone-alt"></i> +54 11-5723-5681</p>
-            <p class="lead"><i class="fas fa-envelope"></i> mannhyr572@gmail.com</p>
+            <p class="lead">Leave me your query through whatsapp or email.</p>
+            <p class="lead">I will answer you as soon as possible.</p>
 
-            <form class="contact-form" id="form-id" novalidate>
-              <!-- name field -->
-              <div class="input-control">
-                <input type="text" name="name" id="userName" class="form-control" placeholder="Your name here ... *"
-                  title="words and empty spaces only" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" autocomplete="off"
-                  required />
-                <div class="error"></div>
-              </div>
+            <p class="lead">
+              <a href="https://wa.me/+5491157235681?text=Hola, me gustaria tener más información! Tes escribo desde la web de MrPictures"
+                class="what-me" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> +54 911-5723-5681
+              </a>
+            </p>
+            <p class="lead">
+              <a href="mailto:mannhyr572@gmail.com" class="mail-me" target="_blank">
+                <i class="fas fa-envelope"></i> mannhyr572@gmail.com
+              </a>
+            </p>
 
-              <!-- mail field -->
-              <div class="input-control">
-                <input class="form-control" id="userEmail" type="email" name="email" placeholder="email@example.com *"
-                  title="Invalid format" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-                  autocomplete="off" required />
-                <div class="error"></div>
-              </div>
-
-              <div class="form-input">
-                <input type="submit" class="btn-submit btn form-input" value="Submit">
-              </div>
-            </form>
           </div>
 
           <div class="contact-right">
@@ -241,8 +228,6 @@
 
 </body>
 
-<!-- form -->
-<script src="./js/form.js"></script>
 <!-- typewriting js -->
 <script src="./js/typewriting.js" defer></script>
 <!-- reveal -->
